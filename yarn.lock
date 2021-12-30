@@ -2756,6 +2756,11 @@ chartjs-color@^2.1.0:
     chartjs-color-string "^0.6.0"
     color-convert "^1.9.3"
 
+chartjs-plugin-datasource@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/chartjs-plugin-datasource/-/chartjs-plugin-datasource-0.1.0.tgz#828c1f5f77cecfa9b8b5e1eb8a60e1e59af3df55"
+  integrity sha512-B+WFPNUX7e/FW8CIK4LaLfm60nBhL95ji9OqegOnj0bu1kid9KAZVEihjpIQ0U+z+wpBKiaEmDVJPiX6DcOykQ==
+
 check-types@^11.1.1:
   version "11.1.2"
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-11.1.2.tgz#86a7c12bf5539f6324eb0e70ca8896c0e38f3e2f"
