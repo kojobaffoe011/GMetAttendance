@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {useRef, useState } from "react";
-import axios from "axios";
+
 
 class ExcelAccept extends Component{
 
@@ -26,19 +26,7 @@ class ExcelAccept extends Component{
 
         console.log(this.state, "16627618vdbdbb$$$$")
 
-        axios({
-            url: `/some/api`,
-            method: 'POST',
-            headers: {
-                authorization: `your token`
-            
-            },
-            data: formdata
-        }).then((res) => {
-
-        },(err)=> {
-
-        })
+       
     }
     render(){
         return(
