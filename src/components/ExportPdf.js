@@ -20,6 +20,10 @@ class ExportPdf extends React.Component{
  render(){
      return(
          <div>
+
+
+        
+         <div>
              
         <button style={{
             marginTop: "auto",
@@ -31,6 +35,8 @@ class ExportPdf extends React.Component{
         </button>
              
          </div>
+         </div>
+         
      )
  }
 

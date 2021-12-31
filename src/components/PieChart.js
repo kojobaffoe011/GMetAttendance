@@ -1,11 +1,10 @@
 import React from 'react'
-import {Bar} from "react-chartjs-2"
-import PieChart from './PieChart';
+import {Pie} from "react-chartjs-2"
 
-const BarChart = () => {
+const PieChart = () => {
     return (
         <div>
-            <Bar
+            <Pie
             data={{
                 labels:['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
                 datasets:[
@@ -39,9 +38,8 @@ const BarChart = () => {
                 maintainAspectRatio: false, 
             }}
             />
-            {/* <PieChart/> */}
         </div>
     )
 }
 
-export default BarChart;
+export default PieChart;
