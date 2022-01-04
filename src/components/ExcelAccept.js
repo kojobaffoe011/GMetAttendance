@@ -10,37 +10,37 @@ class ExcelAccept extends Component{
     }
 
 
-    generateTableHead(table, file){
-        //let file = e.target.files[0]
-        let thead = table.createTHead();
-        let row = thead.insertRow();
-        for( let key of file){
-            let th = document.createElement('th');
-            let text = document.createTextNode(key);
-            th.appendChild(text);
-            row.appendChild(th);
-        }
+    // generateTableHead(table, file){
+    //     //let file = e.target.files[0]
+    //     let thead = table.createTHead();
+    //     let row = thead.insertRow();
+    //     for( let key of file){
+    //         let th = document.createElement('th');
+    //         let text = document.createTextNode(key);
+    //         th.appendChild(text);
+    //         row.appendChild(th);
+    //     }
 
-    }
+    // }
 
     handleFile(e){
         let file = e.target.files[0]
         this.setState({file: file})
-        readXlsxFile(file).then(function(file){
-            var i = 0;
-            file.map((row,index) => { 
-                if (i = 0){
-                    let table = document.getElementById('tbl-data')
-                    generateTableHead(table, row);
-                }
-                if (i>0){
-                    let table = document.getElementById('tbl-data')
-                    generateTableHead(table, row);
-                }
+        // readXlsxFile(file).then(function(file){
+        //     var i = 0;
+        //     file.map((row,index) => { 
+        //         if (i = 0){
+        //             let table = document.getElementById('tbl-data')
+        //             generateTableHead(table, row);
+        //         }
+        //         if (i>0){
+        //             let table = document.getElementById('tbl-data')
+        //             generateTableHead(table, row);
+        //         }
 
 
-            })
-        });
+        //     })
+        // });
     }
 
     handleUpload (e){
