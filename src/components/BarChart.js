@@ -1,6 +1,6 @@
 import React from 'react'
 import {Bar} from "react-chartjs-2"
-import PieChart from './PieChart';
+// import PieChart from './PieChart';
 
 const BarChart = () => {
     return (
