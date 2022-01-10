@@ -1,45 +1,36 @@
 import React from "react";
 import jsPDF from "jspdf";
+// import html2pdf from "html2pdf";
 
-class ExportPdf extends React.Component{ 
-    constructor(props){
-        super(props);
-        this.state = {} 
-    }
+function ExportPdf(props) {
+  function generatePdf(event) {
+    event.preventDefault();
+    // var doc = new jsPDF("l", "px", "a3");
 
-    generatePdf(){
-       
-        var doc = new jsPDF("l", "pt", [500,1000] );
-        doc.html(document.querySelector("#pdf"), {
-        margin: [45,0,0,40],
-        callback: function(pdf){
-            pdf.save("mypdf.pdf");
-        }
-    })
-    }
- render(){
-     return(
-         <div>
+    // doc.html(document.getElementById("#pdf"), {
+    //   margin: [0, 0, 0, 0],
+    //   callback: function (pdf) {
+    //     pdf.save("mypdf.pdf");
+    //   },
+    // });
+    let doc = new jsPDF("l", "pt", [500, 1000]);
+    doc.html(document.querySelector("#pdf"), {
+      margin: [45, 0, 0, 0],
+      callback: function (pdf) {
+        pdf.save("mypdf.pdf");
+      },
+    });
+  }
 
-
-        
-         <div>
-             
-        <button style={{
-            marginTop: "auto",
-            marginBottom: "5%"
-        }} 
-                onClick={this.generatePdf}
-        >
-        export as PDF
+  return (
+    <div>
+      <div>
+        <button className="button" onClick={generatePdf}>
+          Export as PDF
         </button>
-             
-         </div>
-         </div>
-         
-     )
- }
-
+      </div>
+    </div>
+  );
 }
 
 export default ExportPdf;
