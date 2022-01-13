@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./App.css";
 import BarChart from "./components/BarChart";
 import ExcelAccept from "./components/ExcelAccept";
-import ExportPdf from "./components/ExportPdf";
+import { useCurrentPng } from "recharts-to-png";
 import Header from "./components/Header";
+import FileSaver from "file-saver";
 
 function App() {
   const [barChartData, setBarChartData] = useState([]);
+
+  const [getBarPng, { ref: barRef }] = useCurrentPng();
+
+  const handleBarDownload = useCallback(async () => {
+    const png = await getBarPng();
+    if (png) {
+      FileSaver.saveAs(png, "bar-chart.png");
+    }
+  }, [getBarPng]);
+
   const setter = arg => {
     setBarChartData(arg);
   };
@@ -43,7 +54,7 @@ function App() {
             padding: "2em",
           }}
         >
-          <ExcelAccept setter={setter} />
+          <ExcelAccept getBarPng={getBarPng} barRef={barRef} setter={setter} handleBarDownload={handleBarDownload}/>
         </div>
       </div>
 
@@ -54,10 +65,11 @@ function App() {
           background: "white",
           justifyContent: "center",
           alignItems: "center",
+          // border:"2px solid red"
         }}
-        id="pdf"
+        id='export'
       >
-        <BarChart new={barChartData} />
+        <BarChart barRef={barRef} barChartData={barChartData} />
       </div>
     </div>
   );
