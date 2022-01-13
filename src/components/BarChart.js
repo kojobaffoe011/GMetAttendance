@@ -11,13 +11,17 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+
 const Graph = props => {
-  const barChartData = props.new;
+
+  const {barRef, barChartData} = props
+
 
   return (
     <div style={{ width: "100%", height: "700px" }}>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
+          ref={barRef}
           width={500}
           height={300}
           data={barChartData}
@@ -35,7 +39,11 @@ const Graph = props => {
           <Legend />
           <Bar dataKey="attendance" fill="#0a3f88" />
         </BarChart>
+
       </ResponsiveContainer>
+      <div>
+     
+      </div>
     </div>
   );
 };
