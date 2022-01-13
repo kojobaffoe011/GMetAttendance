@@ -57,7 +57,7 @@ function ExcelAccept(props) {
           >
             Click to Upload
           </button>
-          <ExportPdf />
+          <ExportPdf handleBarDownload={props.handleBarDownload} />
         </div>
       </form>
     </div>
