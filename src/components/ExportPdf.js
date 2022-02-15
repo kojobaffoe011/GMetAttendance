@@ -2,12 +2,12 @@ import React from "react";
 import jsPDF from "jspdf";
 
 function ExportPdf(props) {
-  const {handleBarDownload} = props
+  const { handleBarDownload } = props;
 
   const function1 = (e) => {
     e.preventDefault();
-   handleBarDownload();
-  }
+    handleBarDownload();
+  };
 
   return (
     <div>
@@ -21,4 +21,3 @@ function ExportPdf(props) {
 }
 
 export default ExportPdf;
-

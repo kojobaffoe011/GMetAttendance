@@ -24,6 +24,15 @@ const MainPage = (props) => {
       }}
       id="export"
     >
+      <div style={{ display: "flex", flexBasis: "15%" }}>
+        <button
+          className="toggle"
+          onClick={changeToggleGraph}
+          style={{ flexGrow: 1 }}
+        >
+          Toggle Graph
+        </button>
+      </div>
       <div
         style={{
           display: "flex",
@@ -39,15 +48,6 @@ const MainPage = (props) => {
             <PieGraph pie_chart_ref={pie_chart_ref} chartData={chartData} />
           )}
         </div>
-      </div>
-      <div style={{ display: "flex", flexBasis: "15%" }}>
-        <button
-          className="toggle"
-          onClick={changeToggleGraph}
-          style={{ flexGrow: 1 }}
-        >
-          Toggle Graph
-        </button>
       </div>
     </div>
   );

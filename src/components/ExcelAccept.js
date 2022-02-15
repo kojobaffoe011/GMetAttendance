@@ -1,3 +1,4 @@
+import { DataNode } from "domhandler";
 import React, { Component } from "react";
 import { useRef, useState } from "react";
 import readXlsxFile from "read-excel-file";
@@ -12,7 +13,7 @@ function ExcelAccept(props) {
     let file = e.target.files[0];
     setFile(file);
     const readFile = await readXlsxFile(file);
-    // console.log(readFile);
+    console.log(readFile);
 
     const data = [];
 
@@ -25,6 +26,7 @@ function ExcelAccept(props) {
     }
     data.shift();
     props.setter(data);
+    console.log(data);
   }
 
   function handleClick(event) {

@@ -50,6 +50,19 @@
   width: 100%;
 }
 
+.toggle {
+  background: white;
+  color: #0a3f88;
+  border: none;
+  padding: 1em;
+  border-radius: 6px;
+  font-size: 1.2em;
+  font-weight: 800;
+  margin: 0.5em 0;
+  cursor: pointer;
+  width: 100%;
+}
+
 .auto-vertical {
   margin: auto auto;
 }

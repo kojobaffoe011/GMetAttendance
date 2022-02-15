@@ -29,7 +29,7 @@ const Sidebar = (props) => {
           marginTop: "auto",
           background: "rgba(206, 237, 255, .5)",
           padding: "2em",
-          border: "2px solid blue",
+          //   border: "2px solid blue",
         }}
       >
         <ExcelAccept
